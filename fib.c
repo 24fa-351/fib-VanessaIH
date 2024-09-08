@@ -45,9 +45,9 @@ int main(int argc, char *argv[]) {
     const char *filename = argv[3];
     int ending_number;
 
-    int file_number = read_from_file(*filename);
+    int file_number = read_from_file(filename);
 
-    int Nth_term_wanted = interger_agrument + file_number;
+    int Nth_term_wanted = interger_agrument + file_number - 1;
 
     if (function_wanted == 'r') {
         ending_number = fibonacci_recursive_function(Nth_term_wanted);
@@ -56,5 +56,5 @@ int main(int argc, char *argv[]) {
     }
     printf("%d\n", ending_number);
     
-    return 0;
+    return EXIT_SUCCESS;
 }
